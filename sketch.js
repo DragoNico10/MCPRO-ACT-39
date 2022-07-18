@@ -10,8 +10,7 @@ function setup(){
   ball=createSprite(200, 200, 10, 10)
   ball.setCollider("circle")
   ball.addImage("image", ballImage)
-  ball.debug=1
-  ball.scale=0.05
+  ball.scale=0.04
   edges=createEdgeSprites()
   ball.velocityX=4
   ball.velocityY=-4
@@ -21,7 +20,7 @@ function setup(){
 
 function draw(){
   clear()
-  background(255)
+  background(0)
   ball.bounceOff(p1)
   ball.bounceOff(p2)
   ball.bounceOff(edges)
@@ -33,7 +32,7 @@ function draw(){
   }
   if(ball.x<0){
     ball.x=200
-    ball.velocityX=4
+    ball.velocityX=-4
     ball.velocityY=-4
     p2count++
   }
@@ -52,6 +51,10 @@ function draw(){
   textSize(20)
   text(p1count, 150, 40)
   text(p2count, 250, 40)
+  for(let recty=5;recty<450;recty+=30){
+    rectMode(CENTER)
+    rect(200, recty, 5, 10)
+  }
   drawSprites()
 }
 
