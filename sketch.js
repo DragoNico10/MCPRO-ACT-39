@@ -26,7 +26,6 @@ function setup(){
 }
 
 function draw(){
-  clear()
   background(0)
   ball.bounceOff(p1)
   ball.bounceOff(p2)
