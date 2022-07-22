@@ -22,9 +22,7 @@ function setup(){
   p2count=0
   p1.setCollider("rectangle", 0, -30, 70, 130)
   p2.setCollider("rectangle", -1, -30, 60, 110)
-  for(sprite of World.allSprites){
-    sprite.debug=true
-  }
+  //for(sprite of World.allSprites){sprite.debug=true}
 }
 
 function draw(){
